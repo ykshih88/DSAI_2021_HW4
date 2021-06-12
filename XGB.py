@@ -9,11 +9,8 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.ensemble import RandomForestRegressor
 from xgboost import XGBRegressor
 
-from sklearn.model_selection import GridSearchCV
-from sklearn.model_selection import KFold
-from sklearn.model_selection import cross_val_score
-
 from sklearn.metrics import accuracy_score, mean_squared_error
+
 def round_by_threshold(data,low,up,thr,vb=False):
     #data區間小於閾值的設為low (low=1,up=2,thr=0.9 , 1.7->1 , 1.91->2)
     if(vb):
