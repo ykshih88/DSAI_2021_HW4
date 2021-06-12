@@ -136,7 +136,7 @@ def output_result(X_test,preds):
     "ID": X_test.index, 
     "item_cnt_month": preds
     })
-    submission.to_csv('xgb_submission.csv', index=False)
+    submission.to_csv('submission.csv', index=False)
 
 if __name__ == '__main__':
     train_df,test_ori_df= load()
