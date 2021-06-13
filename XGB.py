@@ -115,9 +115,9 @@ def postprocess(preds):
         
     # preds = preds.round()
     print('preds<0:',(preds<0).sum())
-    print('preds>=19:',(preds>=19).sum())
+    print('preds>20:',(preds>20).sum())
     preds[preds<0]=0
-    preds[preds>=19]=10
+    preds[preds>=20]=18.3
 
 def train_and_test(X_train,Y_train,X_test):
     clf = XGBRegressor(random_state = 41
